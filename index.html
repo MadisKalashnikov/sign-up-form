@@ -29,42 +29,47 @@
 				<p>If so, please fill our humble little form.</p>
 			</section>
 			<section class="content-wrapper">
-				<form action="#">
+				<form action="#" id="viking_form">
 					<fieldset>
-						<legend>Personal information</legend>
 						<div class="form-input">
 							<label for="first_name">First Name
 								<strong><span aria-label="required">*</span></strong>
+								<input 
+									type="text" 
+									name="first_name" 
+									id="first_name"
+									required
+								>
+								<span></span>
 							</label>
-							<input 
-								type="text" 
-								name="first_name" 
-								id="first_name"
-								required
-							>
+							
 						</div>
 						<div class="form-input">
 							<label for="last_name">Last name
 								<strong><span aria-label="required">*</span>
 								</strong>
+								<input 
+									type="text"
+									name="last_name" 
+									id="last_name"
+									required
+								>
+								<span></span>
 							</label>
-							<input 
-								type="text"
-								name="last_name" 
-								id="last_name"
-								required
-							>
+							
 						</div>
 						<div class="form-input">
 							<label for="user_mail">E-mail
 								<strong><span aria-label="required">*</span></strong>
+								<input 
+									type="email"
+									name="user_mail"
+									id="user_mail"
+									required
+								>
+								<span></span>
 							</label>
-							<input 
-								type="email"
-								name="user_mail"
-								id="user_mail"
-								required
-							>
+							
 						</div>
 						<div class="form-input">
 							<label for="user_tel">Phone Number
@@ -74,38 +79,44 @@
 								name="user_tel"
 								id="user_tel"
 							>
+							
 						</div>
 						<div class="form-input">
 							<label for="user_pw">Password
 								<strong><span aria-label="required">*</span></strong>
+								<input 
+								type="password"
+								name="user_pw"
+								id="user_pw"
+								minlength="8" 
+								maxlength="20"
+								required
+							>
+							<span></span>
 							</label>
-							<input 
-							type="text"
-							name="user_pw"
-							id="user_pw"
-							minlength="8" 
-							maxlength="20"
-							required
-						>
+							
 						</div>
 						<div class="form-input">
 							<label for="user_c_pw">Confirm Password
 								<strong><span aria-label="required">*</span></strong>
-							</label>
-							<input 
-								type="text"
+								<input 
+								type="password"
 								name="user_c_pw"
 								id="user_c_pw"
 								minlength="8" 
 								maxlength="20"
 								required
 							>
+							<span></span>
+							</label>
+							
 						</div>
 					</fieldset>
 				</form>
 			</section>
 			<section class="content-wrapper">
-				<button type="submit">Become a Viking</button>
+				<button type="submit" form="viking_form">Become a Viking</button>
+				<p>Already a Viking? <a href="#" class="sign-in">Into Valhalla</a></p>
 			</section>
 		</section>
 	</main>

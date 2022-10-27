@@ -8,20 +8,22 @@
 	box-sizing: border-box;
 }
 html, body {
-	height: 100%;
+	min-height: 100%;
+	min-width: 100vw;
 }
 main {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 }
 /* left side */
 .section-container-left {
 	max-width: 35vw;
+	min-height: 100vh;
 	width: 100%;
 	background: url("kristijan-arsov-tcw3nwoAgvs-unsplash.jpg") no-repeat center;
 	background-size: cover;
-
+	position: sticky;
 }
 .logo-container {
 	display: flex;
@@ -42,17 +44,102 @@ main {
 }
 
 /* right side */
+.section-container-right {
+	max-width: 65vw;
+	width: 100%;
+}
 .content-wrapper {
 	width: 100%;
 	padding-block: 3vh;
 	padding-inline: 3.5vw;
+	font-family: "norse";
+	font-size: 25px;
+	min-height: 27.5vh;
+}
+.content-wrapper:nth-child(2) {
+	display: grid;
+	align-items: center;
+	background-color: rgba(128, 128, 128, 0.146);
+	min-height: 45vh;
+}
+.content-wrapper:last-child {
+	display: grid;
+	align-items: center;
+}
+p {
+	padding-block: 15px;
+	word-spacing: 3px;
 }
 form {
-	display: flex;
 	max-width: 60vw;
 	width: 100%;
 }
+fieldset {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(100px, 400px));
+	gap: 25px;
+	border: none;
+}
+legend {
+	padding-block: 10px;
+	
+}
 label, input {
 	display: block;
+	max-width: 300px;
 	width: 100%;
+	font-size: 25px;
+	font-family: "norse";
+}
+label {
+	position: relative;
+}
+input {
+	padding: 5px;
+}
+input:required + span::after {
+	content: "required";
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	top: 4px;
+	right: 0px;
+	background-color: black;
+	padding: 2px 5px;
+}
+input:required:valid {
+	border: green 1px solid;
+}
+input:required:valid:focus {
+	background-color: rgba(0, 128, 0, 0.9);
+}
+input:required:invalid:focus {
+	background-color: rgba(255, 0, 0, 0.9);
+}
+input:required:invalid:focus {
+	outline: 0.5px solid black;
+}
+input:required:invalid {
+	outline: none;
+	border: red 1px solid;
+}
+button {
+	font-family: "norse";
+	padding: 10px 20px;
+	font-size: 25px;
+	max-width: 200px;
+	background-color: white;
+	border: 1px solid black;
+}
+button:hover {
+	outline: 1.5px solid black;
+
+}
+.sign-in {
+	color: gray;
+	text-decoration: none;
+}
+.sign-in:hover {
+	color: rgb(59, 58, 58);
+	text-decoration: none;
 }
